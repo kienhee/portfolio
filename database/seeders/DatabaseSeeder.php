@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Alley 63 Le Duc Tho, My Dinh 2, Nam Tu Liem, Hanoi',
             'description' => 'Freelance  & Full Stack Developer',
             'content' => 'My name is Tran Trung Kien',
+            'skills' => 'JavaScription',
             'password' => Hash::make('trantrungkien202'),
             'created_at' => Date('y-m-d h:m:s'),
             'updated_at' => Date('y-m-d h:m:s'),
