@@ -28,6 +28,8 @@ class UserController extends Controller
             'address' => 'required',
             'description' => 'required|max:255',
             'content' => 'required',
+            'skills' => 'required',
+            'cv' => 'required',
         ], [
             'full_name.required' => 'Vui lòng nhập trường này!',
             'email.required' => 'Vui lòng nhập trường này!',
@@ -39,6 +41,8 @@ class UserController extends Controller
             'address.required' => 'Vui lòng nhập trường này!',
             'description.required' => 'Vui lòng nhập trường này!',
             'content.required' => 'Vui lòng nhập trường này!',
+            'skills.required' => 'Vui lòng nhập trường này!',
+            'cv.required' => 'Vui lòng nhập trường này!',
             // 
             'avatar.image' =>  'Chỉ được phép là ảnh!',
             // 

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\Auth\AuthController;
 use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Color\ColorController;
+use App\Http\Controllers\Admin\Contact\ContatController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\DashboardController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\Admin\Post\PostController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Size\SizeController;
 use App\Http\Controllers\Admin\Tag\TagController;
+use App\Http\Controllers\Admin\Team\TeamController;
 use App\Http\Controllers\Admin\User\UserController;
 use App\Http\Controllers\Client\ClientController;
 
@@ -66,6 +68,26 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::get('/edit/{tag}', [TagController::class, 'edit'])->name('edit');
         Route::put('/edit/{id}', [TagController::class, 'update'])->name('update');
         Route::delete('/delete/{id}', [TagController::class, 'delete'])->name('delete');
+    });
+    Route::prefix('teams')->name('team.')->group(function () {
+        Route::get('/', [TeamController::class, 'index'])->name('index');
+        Route::get('/add', [TeamController::class, 'add'])->name('add');
+        Route::post('/add', [TeamController::class, 'store'])->name('store');
+        Route::get('/edit/{member}', [TeamController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [TeamController::class, 'update'])->name('update');
+        Route::delete('/soft-delete/{id}', [TeamController::class, 'softDelete'])->name('soft-delete');
+        Route::delete('/force-delete/{id}', [TeamController::class, 'forceDelete'])->name('force-delete');
+        Route::delete('/restore/{id}', [TeamController::class, 'restore'])->name('restore');
+    });
+    Route::prefix('contacts')->name('contact.')->group(function () {
+        Route::get('/', [ContatController::class, 'index'])->name('index');
+        Route::get('/add', [ContatController::class, 'add'])->name('add');
+        Route::post('/add', [ContatController::class, 'store'])->name('store');
+        Route::get('/edit/{member}', [ContatController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [ContatController::class, 'update'])->name('update');
+        Route::delete('/soft-delete/{id}', [ContatController::class, 'softDelete'])->name('soft-delete');
+        Route::delete('/force-delete/{id}', [ContatController::class, 'forceDelete'])->name('force-delete');
+        Route::delete('/restore/{id}', [ContatController::class, 'restore'])->name('restore');
     });
 
     Route::prefix('users')->name('user.')->group(function () {

@@ -107,12 +107,39 @@
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="mb-3 col-md-12">
+                            <div class="mb-3 col-md-6">
                                 <label class="form-label" for="description">Mô tả công việc: <span
                                         class="text-danger">*</span></label>
                                 <input class="form-control" type="text" id="description" name="description"
                                     value="{{ old('description') ?? Auth::user()->description }}" />
                                 @error('description')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="select-multiple" class="form-label">Kỹ năng bản thân: <span
+                                        class="text-danger">*</span></label>
+                                <select id="select-multiple" class="@error('skills') is-invalid @enderror" multiple
+                                    name="skills" placeholder="Chọn kỹ năng " data-search="true"
+                                    data-silent-initial-value-set="true">
+                                    @foreach (getAllTech() as $item)
+                                        <option
+                                            {{ strpos(old('skills') ?? Auth::user()->skills, $item->name) !== false ? 'selected' : '' }}
+                                            value="{{ $item->name }}">{{ $item->name }}
+                                        </option>
+                                    @endforeach
+
+                                </select>
+                                @error('skills')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div class="mb-3 col-md-12">
+                                <label class="form-label" for="cv">Link CV online: <span
+                                        class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="cv" name="cv"
+                                    value="{{ old('cv') ?? Auth::user()->cv }}" />
+                                @error('cv')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>

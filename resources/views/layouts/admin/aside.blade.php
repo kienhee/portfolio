@@ -27,6 +27,18 @@
             'route' => '#',
             'children' => [['name' => 'Thêm mới dự án', 'route' => 'dashboard.product.add'], ['name' => 'Danh sách dự án', 'route' => 'dashboard.product.index'], ['name' => 'Công nghệ sử dụng', 'route' => 'dashboard.tag.index']],
         ],
+        [
+            'name' => 'Quản lý nhóm',
+            'classIcon' => 'menu-icon tf-icons bx bxl-microsoft-teams',
+            'route' => '#',
+            'children' => [['name' => 'Thêm mới nhóm', 'route' => 'dashboard.team.add'], ['name' => 'Danh sách nhóm', 'route' => 'dashboard.team.index']],
+        ],
+        [
+            'name' => 'Liên hệ',
+            'classIcon' => 'menu-icon tf-icons bx bxs-contact',
+            'route' => 'dashboard.contact.index',
+            'children' => [],
+        ],
     ];
     $menuDevelopment = [
         [
