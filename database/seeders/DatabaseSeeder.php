@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Freelance  & Full Stack Developer',
             'content' => 'My name is Tran Trung Kien',
             'skills' => 'JavaScription',
+            'cv' => 'JavaScription',
             'password' => Hash::make('trantrungkien202'),
             'created_at' => Date('y-m-d h:m:s'),
             'updated_at' => Date('y-m-d h:m:s'),
