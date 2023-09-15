@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('web');
             $table->string('address');
             $table->string('description');
-            $table->string('skills');
+            $table->string('skills')->nullable();
             $table->string('cv');
             $table->text('content');
             $table->string('password');
