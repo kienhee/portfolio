@@ -103,6 +103,16 @@
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
+                            <div class="mb-3 col-md-12">
+                                <label for="link" class="form-label">Link web: <span
+                                        class="text-danger">*</span></label>
+                                <input class="form-control @error('link') is-invalid @enderror " type="text"
+                                    id="link" name="link" value="{{ old('link') }}" placeholder="Link web"
+                                    autofocus />
+                                @error('link')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
+                            </div>
                             <div class="col-12 mb-3">
                                 <label for="content-product" class="form-label">Thông tin dự án : <span
                                         class="text-danger">*</span></label>

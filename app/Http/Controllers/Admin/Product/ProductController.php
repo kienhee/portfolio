@@ -52,12 +52,14 @@ class ProductController extends Controller
             "content" => "required",
             "technologies" => "required",
             "category_id" => "required|numeric",
-            "cover" => "required"
+            "cover" => "required",
+            "link" => "required",
         ], [
             "name.required" => "Vui lòng nhập trường này!",
             "slug.required" => "Vui lòng nhập trường này!",
             "description.required" => "Vui lòng nhập trường này!",
             "content.required" => "Vui lòng nhập trường này!",
+            "link.required" => "Vui lòng nhập trường này!",
             "category_id.required" => "Vui lòng chọn danh mục!",
             "technologies.required" => "Vui lòng chọn công nghệ!",
             "cover.required" => "Vui lòng thêm ảnh bìa!",
@@ -92,12 +94,14 @@ class ProductController extends Controller
             "content" => "required",
             "technologies" => "required",
             "category_id" => "required|numeric",
-            "cover" => "required"
+            "cover" => "required",
+            "link" => "required",
         ], [
             "name.required" => "Vui lòng nhập trường này!",
             "slug.required" => "Vui lòng nhập trường này!",
             "description.required" => "Vui lòng nhập trường này!",
             "content.required" => "Vui lòng nhập trường này!",
+            "link.required" => "Vui lòng nhập trường này!",
             "category_id.required" => "Vui lòng chọn danh mục!",
             "technologies.required" => "Vui lòng chọn công nghệ!",
             "cover.required" => "Vui lòng thêm ảnh bìa!",

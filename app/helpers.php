@@ -23,7 +23,7 @@ function author()
 
 function getAllProducts()
 {
-    return Product::all();
+    return Product::orderBy('created_at', 'DESC')->get();
 }
 
 function getAllMembers()

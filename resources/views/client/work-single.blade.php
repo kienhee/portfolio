@@ -42,7 +42,7 @@
                             </ul>
 
 
-                            <p><a href="#" class="readmore">Visit Website</a></p>
+                            <p><a href="{{ $product->link }}" target="_blank" class="readmore">Visit Website</a></p>
                         </div>
                     </div>
                 </div>
@@ -92,37 +92,5 @@
 
 
 
-    <div class="site-section pb-0">
-        <div class="container">
-
-            <div class="owl-carousel testimonial-carousel">
-
-                <div class="testimonial-wrap">
-                    <div class="testimonial">
-                        <img src="{{ asset('client') }}/img/person_1.jpg" alt="Image" class="img-fluid">
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt
-                                ut
-                                officiis explicabo inventore.</p>
-                        </blockquote>
-                        <p>&mdash; Jean Hicks</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-wrap">
-                    <div class="testimonial">
-                        <img src="{{ asset('client') }}/img/person_2.jpg" alt="Image" class="img-fluid">
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt
-                                ut
-                                officiis explicabo inventore.</p>
-                        </blockquote>
-                        <p>&mdash; Chris Stanworth</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
+    <x-my-team />
 @endsection
