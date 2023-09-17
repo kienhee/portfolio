@@ -29,10 +29,10 @@
 
                             <h4 class="h4 mb-3">What I did</h4>
                             <ul class="list-unstyled list-line mb-5">
-                                <li>Maintain system</li>
-                                <li>Design UI/UX</li>
-                                <li>Deploy project</li>
-                                <li>Build componet</li>
+                                @foreach (explode(',', $product->i_do) as $tech)
+                                    <li>{{ $tech }}</li>
+                                @endforeach
+
                             </ul>
                             <h4 class="h4 mb-3">What technology is used?</h4>
                             <ul class="list-unstyled list-line mb-5">

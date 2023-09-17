@@ -103,13 +103,23 @@
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="mb-3 col-md-12">
+                            <div class="mb-3 col-md-6">
                                 <label for="link" class="form-label">Link web: <span
                                         class="text-danger">*</span></label>
                                 <input class="form-control @error('link') is-invalid @enderror " type="text"
                                     id="link" name="link" value="{{ old('link') }}" placeholder="Link web"
                                     autofocus />
                                 @error('link')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="i_do" class="form-label">What I did: <span
+                                        class="text-danger">*</span></label>
+                                <input class="form-control @error('i_do') is-invalid @enderror " type="text"
+                                    id="i_do" name="i_do" value="{{ old('i_do') }}"
+                                    placeholder="Design, maintain, v.v" autofocus />
+                                @error('i_do')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
