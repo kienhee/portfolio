@@ -1,4 +1,5 @@
 @extends('layouts.client.index')
+@section('title',"Services")
 @section('content')
     <div class="site-section">
         <div class="container">

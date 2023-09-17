@@ -1,4 +1,5 @@
 @extends('layouts.client.index')
+@section('title', $product->name)
 @section('content')
     <div class="site-section">
         <div class="container">

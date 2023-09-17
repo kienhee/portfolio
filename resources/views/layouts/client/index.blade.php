@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MyPortfolio</title>
+    <title>@yield('title', '| Tran Trung Kien')</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -29,7 +29,35 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('client') }}/css/style.css" rel="stylesheet">
+    <!-- Primary Meta Tags -->
 
+    <meta name="title" content="My CV - Tran Trung Kien" />
+    <meta name="description"
+        content="I am a programmer with over 1.5 years of experience, deeply passionate about creating applications and solving technical challenges.
+
+I am always curious and eager to learn, ensuring that I stay up-to-date with the latest technologies, guaranteeing that my products and projects consistently achieve optimal performance. Responsibility and attention to detail are paramount to me, and I always aim to create suitable and efficient solutions. My creativity and passion for solving technical challenges are what I bring to every project. I believe that technology can change the world, and I am always ready to contribute to that. Please feel free to reach out if you are seeking a passionate and creative programmer to collaborate on your projects." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ getEnv('APP_URL') }}" />
+    <meta property="og:title" content="My CV - Tran Trung Kien" />
+    <meta property="og:description"
+        content="I am a programmer with over 1.5 years of experience, deeply passionate about creating applications and solving technical challenges.
+
+I am always curious and eager to learn, ensuring that I stay up-to-date with the latest technologies, guaranteeing that my products and projects consistently achieve optimal performance. Responsibility and attention to detail are paramount to me, and I always aim to create suitable and efficient solutions. My creativity and passion for solving technical challenges are what I bring to every project. I believe that technology can change the world, and I am always ready to contribute to that. Please feel free to reach out if you are seeking a passionate and creative programmer to collaborate on your projects." />
+    <meta property="og:image" content="{{ getEnv('APP_URL') }}/images/meta-png.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ getEnv('APP_URL') }}" />
+    <meta property="twitter:title" content="My CV - Tran Trung Kien" />
+    <meta property="twitter:description"
+        content="I am a programmer with over 1.5 years of experience, deeply passionate about creating applications and solving technical challenges.
+
+I am always curious and eager to learn, ensuring that I stay up-to-date with the latest technologies, guaranteeing that my products and projects consistently achieve optimal performance. Responsibility and attention to detail are paramount to me, and I always aim to create suitable and efficient solutions. My creativity and passion for solving technical challenges are what I bring to every project. I believe that technology can change the world, and I am always ready to contribute to that. Please feel free to reach out if you are seeking a passionate and creative programmer to collaborate on your projects." />
+    <meta property="twitter:image" content="{{ getEnv('APP_URL') }}/images/meta-png.jpg" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
 
 </head>
 

@@ -1,4 +1,5 @@
 @extends('layouts.client.index')
+@section('title', 'My CV - Tran Trung Kien')
 @section('content')
     <div class="site-section site-portfolio">
         <div class="container">

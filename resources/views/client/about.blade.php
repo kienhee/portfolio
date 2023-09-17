@@ -1,4 +1,6 @@
 @extends('layouts.client.index')
+@section('title',"About me")
+    
 @section('content')
     <div class="site-section pb-0 site-portfolio">
         <div class="container">
